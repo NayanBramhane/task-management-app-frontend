@@ -12,7 +12,7 @@ const Register = () => {
     useContext(Context);
 
   const submitHandler = async (e) => {
-    const server = import.meta.env.BASE_URI;
+    const server = import.meta.env.VITE_BASE_URI;
 
     e.preventDefault();
 

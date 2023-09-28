@@ -14,7 +14,7 @@ const Home = () => {
   const [refresh, setRefresh] = useState(false);
   const { isAuthenticated, setUser, setIsAuthenticated } = useContext(Context);
 
-  const server = import.meta.env.BASE_URI;
+  const server = import.meta.env.VITE_BASE_URI;
 
   const updateHandler = async (id) => {
     try {

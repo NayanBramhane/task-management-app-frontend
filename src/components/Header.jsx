@@ -9,7 +9,7 @@ const Header = () => {
     useContext(Context);
 
   const logoutHandler = async () => {
-    const server = import.meta.env.BASE_URI;
+    const server = import.meta.env.VITE_BASE_URI;
 
     setLoading(true);
     try {
