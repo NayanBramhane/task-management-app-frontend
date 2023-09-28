@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     setLoading(true);
 
-    const server = import.meta.env.VITE_BASE_URI;
+    const server = import.meta.env.BASE_URI;
     axios
       .get(`${server}/users/me`, {
         withCredentials: true,

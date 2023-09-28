@@ -14,7 +14,7 @@ const Home = () => {
   const [refresh, setRefresh] = useState(false);
   const { isAuthenticated, setUser, setIsAuthenticated } = useContext(Context);
 
-  const server = import.meta.env.VITE_BASE_URI;
+  const server = import.meta.env.BASE_URI;
 
   const updateHandler = async (id) => {
     try {
@@ -86,7 +86,6 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
 
-    const server = import.meta.env.VITE_BASE_URI;
     axios
       .get(`${server}/users/me`, {
         withCredentials: true,
