@@ -35,11 +35,10 @@ const Register = () => {
 
       toast.success(data.message);
       setIsAuthenticated(true);
-      setLoading(false);
     } catch (error) {
-      toast.error("some error");
-      console.log(error);
+      toast.error(error.response.data.message || "some error");
       setIsAuthenticated(false);
+    } finally {
       setLoading(false);
     }
   };
