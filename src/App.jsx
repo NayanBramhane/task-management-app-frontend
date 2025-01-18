@@ -23,14 +23,13 @@ function App() {
       .then((res) => {
         setUser(res.data.user);
         setIsAuthenticated(true);
-        setLoading(false);
       })
       .catch((error) => {
         toast.error(error.response.data.message);
         setUser({});
         setIsAuthenticated(false);
-        setLoading(false);
-      });
+      })
+      .finally(() => setLoading(false));
   }, []);
 
   return (
